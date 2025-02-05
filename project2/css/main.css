@@ -1,0 +1,42 @@
+div#right img {
+    width: 100%; 
+    margin: 0px; 
+    display: block;
+}
+
+div#left h3, div#right h3, div#across h3 {
+    text-align: center; 
+    margin: 1%;
+}
+
+div#middle{
+    padding-bottom: 10px;
+    display: flex;
+    width: 98%;
+    margin: 0px 1%;
+    justify-content: space-between;
+    gap: 1%;
+}
+
+div#left img#img, div#right img#img {
+    width: 30%;
+    float: left;
+    margin: 1%;
+    padding: 1%;
+    margin-right: 5%;
+}
+
+div#bottom {
+    padding-bottom: 10px;
+    display: flex;
+    width: 70%;
+    margin: 0px 15%;
+    justify-content: space-between;
+}
+
+div#bottom div#across {
+    box-shadow: 0px 0px 5px;
+    padding: 10px;
+    width: 100%;
+    background: radial-gradient(azure, lightblue);
+}
