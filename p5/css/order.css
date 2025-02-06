@@ -1,0 +1,58 @@
+
+.firstRow {
+    margin-top: 70px;
+}
+
+div.hoverItem:hover {
+    color: gray;
+    cursor: pointer;
+}
+
+.card > div {
+    background-color: var(--g);
+    border-radius: 5px;
+}
+
+.minus, .plus {
+    color: black;
+    background-color: var(--b);
+}
+
+
+.cursiveName {
+    font-family: 'Ephesis', cursive; 
+    font-weight: bolder;
+}
+.card-body h5 {
+    font-size: 25px;
+}
+.price-input p, .price-input input{
+    font-size: 20px;
+}
+p.card-text {
+    font-size: 15px;
+}
+
+.menuButton {
+display: inline-block;
+cursor: pointer;
+}
+#cartImg{
+    width: 4vw;
+}
+#itemCountSub{
+    display: inline-block;
+    white-space: pre;
+    font-size: 10px;
+
+}
+#checkoutSpace{
+    display: inline-block;
+    white-space: pre;
+}
+
+
+.card {
+    flex: 1 0 auto;
+    width: 20vw;
+}

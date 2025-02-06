@@ -1,0 +1,60 @@
+:root {
+    --b: rgba(150, 228, 242, 0.4);
+    --bb: rgb(150, 228, 242);
+    --g: rgb(246, 255, 240);
+}
+
+.navBar {
+    --s: 50px; /* control the size */
+    
+    --_g: conic-gradient(at 50% 25%,#0000 75%,rgba(150, 228, 242, 0.4) 0);
+    background:
+        var(--_g),var(--_g) var(--s) var(--s),
+        var(--_g) calc(2*var(--s)) calc(2*var(--s)),
+        var(--_g) calc(3*var(--s)) calc(3*var(--s)),
+        repeating-linear-gradient(135deg,rgb(246, 255, 240) 0 12.5%,#fff 0 25%);
+    background-size: calc(4*var(--s)) calc(4*var(--s))
+}
+
+.firstRow {
+    margin-top: 70px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.hoverItem:hover {
+    color: gray;
+    cursor: pointer;
+}
+
+.cursiveName {
+    font-family: 'Ephesis', cursive; 
+    font-weight: bolder;
+}
+
+
+.menuButton {
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }

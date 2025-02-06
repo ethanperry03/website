@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Order</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/jpg" href="images/logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+
+  <script src="http://code.jQuery.com/jquery-3.7.1.min.js"></script>
+  <link rel="stylesheet" href="css/order.css">
+  <link rel="stylesheet" href="css/main.css">
+
+
+</head>
+
+
+<body>
+    <div class="container-fluid col-12 border fixed-top bg-light navBar">
+            <div class="row">
+                <div class="row col-8 col-sm-5 d-flex justify-content-center">
+                    <div class="col-3 col-sm-2">
+                        <img src="images/logo.png" width="75" alt="logo">
+                    </div>
+                    <div class="col-6 col-sm-4 m-auto">
+                        <h1 class="text-center cursiveName">CATSCAPP</h1>
+                    </div>
+                </div>
+    
+                <div class="col-sm-2 d-none d-sm-block m-auto d-flex justify-content-center hoverItem">
+                    <a href="index.html"><h1 class="text-center">Home</h1></a>
+                </div> 
+                <div class="col-sm-2 d-none d-sm-block m-auto d-flex justify-content-center hoverItem">
+                    <a href="order.html"><h1 class="text-center">Order</h1></a>
+                </div>             
+                <div class="col-sm-2 d-none d-sm-block m-auto d-flex justify-content-center hoverItem">
+                    <a href="checkout.html"><img src="images/cart.png" alt="Shopping Cart" id="cartImg"></a>
+                    <h3 class="d-inline align-bottom" id = "itemCount">0</h3>
+                </div> 
+    
+                <div class="col-2 d-block d-sm-none m-auto d-flex justify-content-center">
+                    <div class="container">                                      
+                        <div class="dropdown">                                
+                            <div id="dropdownMenuButton" data-toggle="dropdown">
+                                    <div class="bar1"></div>
+                                    <div class="bar2"></div>
+                                    <div class="bar3"></div>
+                                </div>
+                            <ul class="dropdown-menu" style="position: absolute; left: -40px;">
+                                <li class="hoverItem"><a href="index.html">Home</a></li>
+                                <li class="hoverItem"><a href="order.html">Order</a></li>
+                                <li class="hoverItem"><a href="checkout.html">Checkout
+                                    <span id = "checkoutSpace"><span id="itemCountSub">0</span></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+     <!-- effffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff -->
+     
+     <div class="container-fluid firstRow">
+        <div class="row col-11 mx-auto">
+
+            <div class="d-flex align-items-stretch col-sm-6 col-lg-3 mt-3 border-0">
+                <div class="card border">
+                    <img class="card-img-top" src="images/cheese.jpg" alt="Card image cap">
+                
+                    <div class="card-body">
+                    <h5 class="card-title" id="name0">Cheese Pizza</h5>
+                    <p class="card-text mb-4">
+                        Savor the tantalizing blend of crispy crust and gooey cheese with our brick oven pizza.
+                    </p>
+                    </div>
+
+                    <div class="price-input d-flex align-items-end pb-3">
+                        <div class="row col-12">
+                            <div class="col-6 align-self-center" id="price0"><p class="text-center">$14.99</p></div>
+                                <a class="btn btn-primary col-2 minus" id="m0"><p class="align-self-center">-</p></a>
+                                <input type="text" readonly class="col-2 text-center" id="countI0" value="0">
+                                <a class="btn btn-primary col-2 plus" id="p0"><p class="align-self-center">+</p></a>
+                            </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="d-flex align-items-stretch col-sm-6 col-lg-3 mt-3 border-0">
+                <div class="card border">
+                    <img class="card-img-top" src="images/pepperoni.jpg" alt="Card image cap">
+                
+                    <div class="card-body">
+                        <h5 class="card-title" id="name1">Pepperoni Pizza</h5>
+                        <p class="card-text">
+                            Conquer your inner beast with fresh sliced pepperoni atop our authentic brick oven crust.
+                        </p>
+                    </div>
+
+                    <div class="price-input d-flex align-items-end pb-3">
+                        <div class="row col-12">
+                            <div class="col-6 align-self-center" id="price1"><p class="text-center">$16.99</p></div>
+                                <a class="btn btn-primary col-2 minus" id="m1"><p class="align-self-center">-</p></a>
+                                <input type="text" readonly class="col-2 text-center" id="countI1" value="0">
+                                <a class="btn btn-primary col-2 plus" id="p1"><p class="align-self-center">+</p></a>
+                            </div>
+                    
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-stretch col-sm-6 col-lg-3 mt-3 border-0">
+                <div class="card border">
+                    <img class="card-img-top" src="images/ItalianSub.jpg" alt="Card image cap">
+                
+                    <div class="card-body">
+                    <h5 class="card-title" id="name2">Italian Sub</h5>
+                    <p class="card-text">
+                        The Italian sub boasts layers of premium cured meats, zesty Italian dressing, fresh veggies, and melted cheese.
+                    </p>
+                    </div>
+
+                    <div class="price-input d-flex align-items-end pb-3">
+                        <div class="row col-12">
+                            <div class="col-6 align-self-center" id="price2"><p class="text-center">$8.99</p></div>
+                                <a class="btn btn-primary col-2 minus" id="m2"><p class="align-self-center">-</p></a>
+                                <input type="text" readonly class="col-2 text-center" id="countI2" value="0">
+                                <a class="btn btn-primary col-2 plus" id="p2"><p class="align-self-center">+</p></a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-stretch col-sm-6 col-lg-3 mt-3 border-0">
+                <div class="card border">
+                    <img class="card-img-top" src="images/PCS.jpg" alt="Card image cap">
+                
+                    <div class="card-body">
+                    <h5 class="card-title" id="name3">Philly Cheese Steak</h5>
+                    <p class="card-text">
+                        Experience the mouthwatering perfection of our cheesesteak, featuring thinly sliced steak smothered in melted cheese.
+                    </p>
+                    </div>
+
+                    <div class="price-input d-flex align-items-end pb-3">
+                        <div class="row col-12">
+                            <div class="col-6 align-self-center" id="price3"><p class="text-center">$9.99</p></div>
+                                <a class="btn btn-primary col-2 minus" id="m3"><p class="align-self-center">-</p></a>
+                                <input type="text" readonly class="col-2 text-center" id="countI3" value="0">
+                                <a class="btn btn-primary col-2 plus" id="p3"><p class="align-self-center">+</p></a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="container-fluid">
+        <div class="row col-11 mx-auto">
+
+            <div class="d-flex align-items-stretch col-sm-6 col-lg-3 mt-3 border-0">
+                <div class="card border">
+                    <img class="card-img-top" src="images/stuffedCheeseBread.jpg" alt="Card image cap">
+                
+                    <div class="card-body">
+                    <h5 class="card-title" id="name4">Stuffed Cheese Bread</h5>
+                    <p class="card-text">
+                        Our Cheesey Bread is a delectable combination of warm, golden-brown crust enveloping a gooey center of melted cheese.
+                    </p>
+                    </div>
+
+                    <div class="price-input d-flex align-items-end pb-3">
+                        <div class="row col-12">
+                            <div class="col-6 align-self-center" id="price4"><p class="text-center">$6.49</p></div>
+                                <a class="btn btn-primary col-2 minus" id="m4"><p class="align-self-center">-</p></a>
+                                <input type="text" readonly class="col-2 text-center" id="countI4" value="0">
+                                <a class="btn btn-primary col-2 plus" id="p4"><p class="align-self-center">+</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-stretch col-sm-6 col-lg-3 mt-3 border-0">
+                <div class="card border">
+                    <img class="card-img-top" src="images/CaesarSalad.jpg" alt="Card image cap">
+                
+                    <div class="card-body">
+                    <h5 class="card-title" id="name5">Caesar Salad</h5>
+                    <p class="card-text">
+                        Elevate your palate with our Caesar salad, a crisp ensemble of fresh romaine lettuce, crunchy croutons, and tangy Caesar dressing.
+                    </p>
+                    </div>
+
+                    <div class="price-input d-flex align-items-end pb-3">
+                        <div class="row col-12">
+                            <div class="col-6 align-self-center" id="price5"><p class="text-center">$7.49</p></div>
+                                <a class="btn btn-primary col-2 minus" id="m5"><p class="align-self-center">-</p></a>
+                                <input type="text" readonly class="col-2 text-center" id="countI5" value="0">
+                                <a class="btn btn-primary col-2 plus" id="p5"><p class="align-self-center">+</p></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-stretch col-sm-6 col-lg-3 mt-3 border-0">
+                <div class="card border">
+                    <img class="card-img-top" src="images/coke.jpg" alt="Card image cap">
+                
+                    <div class="card-body">
+                    <h5 class="card-title" id="name6">Coke</h5>
+                    <p class="card-text">
+                        Enjoy the classic, thirst-quenching delight of a Coca-cola out of a bottle, served ice cold.
+                    </p>
+                    </div>
+
+                    <div class="price-input d-flex align-items-end pb-3">
+                        <div class="row col-12">
+                            <div class="col-6 align-self-center" id="price6"><p class="text-center">$3.99</p></div>
+                                <a class="btn btn-primary col-2 minus" id="m6"><p class="align-self-center">-</p></a>
+                                <input type="text" readonly class="col-2 text-center" id="countI6" value="0">
+                                <a class="btn btn-primary col-2 plus" id="p6"><p class="align-self-center">+</p></a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-stretch col-sm-6 col-lg-3 mt-3 border-0">
+                <div class="card border">
+                    <img class="card-img-top" src="images/rootBeer.jpg" alt="Card image cap">
+                
+                    <div class="card-body">
+                    <h5 class="card-title" id="name7">Root Beer</h5>
+                    <p class="card-text">
+                        Indulge in the crisp and sweet power of a Root Beer, and ask your server about turning it into a float!
+                    </p>
+                    </div>
+
+                    <div class="price-input d-flex align-items-end pb-3">
+                        <div class="row col-12">
+                            <div class="col-6 align-self-center" id="price7"><p class="text-center">$3.99</p></div>
+                                <a class="btn btn-primary col-2 minus" id="m7"><p class="align-self-center">-</p></a>
+                                <input type="text" readonly class="col-2 text-center" id="countI7" value="0">
+                                <a class="btn btn-primary col-2 plus" id="p7"><p class="align-self-center">+</p></a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br>
+    </div>
+
+    <script src="js/order.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+
+  <script src="http://code.jQuery.com/jquery-3.7.1.min.js"></script>
+  <link rel="stylesheet" href="css/menuButton.css">
+  <link rel="stylesheet" href="css/main.css">
+  
+  <style>
+        
+        body {
+            background-color: #fdfdfd;
+        }
+
+        .prev {
+            background-color: var(--g);
+        }
+
+        .floatRight {
+            display: block;
+            float: right;
+            font-size: 3rem;
+            text-align: right;
+        }
+        .imagePreview {
+            width: 20%;
+        }
+        .orderSummary {
+            height: 64vh;
+            overflow-y: scroll;
+        }
+
+        .paymentMenu {
+            display: none;
+            position: absolute;
+            top: 20%;
+            left: 20%;
+        }
+
+        .firstRow {
+            margin-top: 70px;
+        }
+
+        div.hoverItem:hover {
+            color: gray;
+            cursor: pointer;
+        }
+
+        .cursiveName {
+            font-family: 'Ephesis', cursive; 
+            font-weight: bolder;
+        }
+
+        .menuButton {
+        display: inline-block;
+        cursor: pointer;
+        }
+
+        .bar1, .bar2, .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: #333;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        .blurr {
+            filter: blur(3px);
+        }
+
+        .change .bar1 {
+        transform: translate(0, 11px) rotate(-45deg);
+        }
+
+        .change .bar2 {opacity: 0;}
+
+        .change .bar3 {
+        transform: translate(0, -11px) rotate(45deg);
+        }
+
+        @media screen and (max-width: 991px) {
+            .floatRight {
+                font-size: 2.3rem;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            .floatRight {
+                font-size: 1.5rem;
+            }
+        }
+
+  </style>
+
+</head>
+
+
+<body>
+    <div class="container-fluid col-12 border fixed-top bg-light most navBar">
+        <div class="row">
+            <div class="row col-8 col-sm-5 d-flex justify-content-center">
+                <div class="col-3 col-sm-2">
+                    <img src="images/logo.png" width="75">
+                </div>
+                <div class="col-6 col-sm-4 m-auto">
+                    <h1 class="text-center cursiveName">CATSCAPP</h1>
+                </div>
+            </div>
+
+            <div class="col-sm-2 d-none d-sm-block m-auto d-flex justify-content-center hoverItem">
+                <a href="index.html"><h1 class="text-center">Home</h1></a>
+            </div> 
+            <div class="col-sm-2 d-none d-sm-block m-auto d-flex justify-content-center hoverItem">
+                <a href="order.html"><h1 class="text-center">Order</h1></a>
+            </div>             
+            <div class="col-sm-2 d-none d-sm-block m-auto d-flex justify-content-center hoverItem">
+                <a href="checkout.html"><h1 class="text-center">CheckOut</h1></a>
+            </div> 
+
+
+            <div class="col-2 d-block d-sm-none m-auto d-flex justify-content-center">
+                <div class="container">                                      
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+                            <div class="menuButton">
+                                <div class="bar1"></div>
+                                <div class="bar2"></div>
+                                <div class="bar3"></div>
+                            </div>
+                        </button>
+                        <ul class="dropdown-menu">
+                        <li class="hoverItem"><a href="index.html">Home</a></li>
+                        <li class="hoverItem"><a href="order.html">Order</a></li>
+                        <li class="hoverItem"><a href="checkout.html">Checkout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid col-12 most" style="margin-top: 70px;">
+        <div class="row">
+            <div class="bannerText v">
+                <h2 class="text-center">Order Summary</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-11 mx-auto orderSummary">
+                <div class="border my-2 p-2 prev">                    
+                    <div class="floatRight">
+                        name of item <br>
+                        Price<br>
+                        Amount
+                    </div>
+                    <img class="imagePreview" src="images/cheese.jpg" alt="yummy food">
+                </div>
+
+                <div class="border my-2 p-2 prev">                    
+                    <div class="floatRight">
+                        name of item <br>
+                        Price<br>
+                        Amount
+                    </div>
+                    <img class="imagePreview" src="images/pepperoni.jpg" alt="yummy food">
+                </div>
+
+                <div class="border my-2 p-2 prev">                    
+                    <div class="floatRight">
+                        name of item <br>
+                        Price<br>
+                        Amount
+                    </div>
+                    <img class="imagePreview" src="images/ItalianSub.jpg" alt="yummy food">
+                </div>
+                
+                <div class="border my-2 p-2 prev">                    
+                    <div class="floatRight">
+                        name of item <br>
+                        Price<br>
+                        Amount
+                    </div>
+                    <img class="imagePreview" src="images/PCS.jpg" alt="yummy food">
+                </div>
+                
+                <div class="border my-2 p-2 prev">                    
+                    <div class="floatRight">
+                        name of item <br>
+                        Price<br>
+                        Amount
+                    </div>
+                    <img class="imagePreview" src="images/stuffedCheeseBread.jpg" alt="yummy food">
+                </div>
+
+                <div class="border my-2 p-2 prev">                    
+                    <div class="floatRight">
+                        name of item <br>
+                        Price<br>
+                        Amount
+                    </div>
+                    <img class="imagePreview" src="images/CaesarSalad.jpg" alt="yummy food">
+                </div>
+                
+                <div class="border my-2 p-2 prev">                    
+                    <div class="floatRight">
+                        name of item <br>
+                        Price<br>
+                        Amount
+                    </div>
+                    <img class="imagePreview" src="images/coke.jpg" alt="yummy food">
+                </div>
+
+                <div class="border my-2 p-2 prev">                    
+                    <div class="floatRight">
+                        name of item <br>
+                        Price<br>
+                        Amount
+                    </div>
+                    <img class="imagePreview" src="images/rootBeer.jpg" alt="yummy food">
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="container">
+        <div class="col-11 col-md-10 mx-auto my-4 floatRight" id="payNow">
+            Subtotal
+            <button>PayNow</button>
+        </div>
+    </div>
+
+    <div class="border bg-light paymentMenu">
+        <form style="float: right; margin-top: 3%;"><input type="button" class="close" value="X"></form>
+        <h2 class="text-center">Enter your payment info</h2>
+    </div>
+
+
+    <script>
+        $("div.dropdown").click(function() {
+            $("div.menuButton").toggleClass("change");
+        });
+
+
+        var boolOpen = false;
+
+        $("#payNow").click(function(){
+            $(".paymentMenu").toggleClass("d-block");
+            $(".most, .container").toggleClass("blurr");
+            boolOpen = true;
+        });
+
+        $(".most, .close").click(function(){
+            if(boolOpen) {
+                $(".paymentMenu").removeClass("d-block");
+                $(".most, .container").removeClass("blurr");
+                boolOpen = false;
+            }
+        });
+            
+    </script>
+
+</body>
+</html>

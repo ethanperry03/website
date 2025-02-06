@@ -1,0 +1,85 @@
+.navBar, body {
+    --s: 50px; /* control the size */
+    
+    --_g: conic-gradient(at 50% 25%,#0000 75%,rgba(150, 228, 242, 0.4) 0);
+    background:
+        var(--_g),var(--_g) var(--s) var(--s),
+        var(--_g) calc(2*var(--s)) calc(2*var(--s)),
+        var(--_g) calc(3*var(--s)) calc(3*var(--s)),
+        repeating-linear-gradient(135deg,rgb(246, 255, 240) 0 12.5%,#fff 0 25%);
+    background-size: calc(4*var(--s)) calc(4*var(--s))
+}
+
+.icons {
+width: 100px;
+float: left;
+}
+.card {
+font-size: 1.5rem;
+}
+
+.blurbs > div {
+    padding: 2%;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.blurbText {
+    background-color: var(--g);
+    opacity: .85;
+    font-weight: bold;
+    margin-left: 2%;
+    top: 90px;
+    display: block;
+    position: absolute;
+    padding: 1%;
+    text-align: justify;
+}
+
+.mainStuff {
+margin-top: 60px;
+}
+
+.davis {
+display: block;
+}
+.davisSmall {
+display: none;
+}
+#cartImg{
+    width: 4vw;
+}
+#itemCountSub{
+    display: inline-block;
+    white-space: pre;
+    font-size: 10px;
+
+}
+#checkoutSpace{
+    display: inline-block;
+    white-space: pre;
+}
+
+@media screen and (max-width: 991px) {
+    .blurbText {
+        position:initial;
+        margin: 1%;
+    }
+    .mainStuff {
+        margin-top: 0px;
+    }
+    .davis {
+        display: none;
+    }
+    .davisSmall {
+        display: block;
+    }
+    .blurbs > div {
+        font-size: 13px;
+    }
+}
+
+b {
+    font-weight: bolder;
+    color: rgb(12, 48, 4);
+}

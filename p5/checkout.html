@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Checkout</title>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/jpg" href="images/logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Ephesis&display=swap" rel="stylesheet">
+
+  <script src="http://code.jQuery.com/jquery-3.7.1.min.js"></script>
+  <link rel="stylesheet" href="css/checkout.css">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+
+<body>
+    <div class="container-fluid col-12 border fixed-top bg-light most navBar">
+        <div class="row">
+            <div class="row col-8 col-sm-5 d-flex justify-content-center">
+                <div class="col-3 col-sm-2">
+                    <img src="images/logo.png" width="75" alt="logo">
+                </div>
+                <div class="col-6 col-sm-4 m-auto">
+                    <h1 class="text-center cursiveName">CATSCAPP</h1>
+                </div>
+            </div>
+
+            <div class="col-sm-2 d-none d-sm-block m-auto d-flex justify-content-center hoverItem">
+                <a href="index.html"><h1 class="text-center">Home</h1></a>
+            </div> 
+            <div class="col-sm-2 d-none d-sm-block m-auto d-flex justify-content-center hoverItem">
+                <a href="order.html"><h1 class="text-center">Order</h1></a>
+            </div>             
+            <div class="col-sm-2 d-none d-sm-block m-auto d-flex justify-content-center">
+                <a href="checkout.html"><img src="images/cart.png" alt="Shopping Cart" id="cartImg"></a>
+                <h3 class="d-inline align-bottom" id = "itemCount">0</h3>
+            </div>  
+
+
+            <div class="col-2 d-block d-sm-none m-auto d-flex justify-content-center">
+                <div class="container">                                      
+                    <div class="dropdown">                                
+                        <div id="dropdownMenuButton" data-toggle="dropdown">
+                                <div class="bar1"></div>
+                                <div class="bar2"></div>
+                                <div class="bar3"></div>
+                            </div>
+                        <ul class="dropdown-menu" style="position: absolute; left: -40px;">
+                            <li class="hoverItem"><a href="index.html">Home</a></li>
+                            <li class="hoverItem"><a href="order.html">Order</a></li>
+                            <li class="hoverItem"><a href="checkout.html">Checkout
+                                <span id = "checkoutSpace"><span id="itemCountSub">0</span></span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid col-12 most mb-5" style="margin-top: 70px;">
+        <div class="row">
+            <div class="bannerText v">
+                <h2 class="text-center">Order Summary</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-9 mx-auto orderSummary">
+                <div class="border my-2 p-2 itemInfo d-flex justify-content-between">      
+                    <img class="imagePreview img-fluid" src="images/cheese.jpg" alt="yummy food">              
+                    <div class="rightDiv">
+                        <p class="text-end">Cheese Pizza</p>
+                        <p class="text-end">Price</p>
+                        <p class="text-end">Amount</p>
+                    </div>
+                </div>
+
+                <div class="border my-2 p-2 itemInfo d-flex justify-content-between">                    
+                    <img class="imagePreview" src="images/pepperoni.jpg" alt="yummy food">
+                    <div class="rightDiv">
+                        <p class="text-end">Pepperoni Pizza</p>
+                        <p class="text-end">Price</p>
+                        <p class="text-end">Amount</p>
+                    </div>
+                </div>
+
+                <div class="border my-2 p-2 itemInfo d-flex justify-content-between">         
+                    <img class="imagePreview" src="images/ItalianSub.jpg" alt="yummy food">           
+                    <div class="rightDiv">
+                        <p class="text-end">Italian Sub</p>
+                        <p class="text-end">Price</p>
+                        <p class="text-end">Amount</p>
+                    </div>
+                </div>
+                
+                <div class="border my-2 p-2 itemInfo d-flex justify-content-between">        
+                    <img class="imagePreview" src="images/PCS.jpg" alt="yummy food">            
+                    <div class="rightDiv">
+                        <p class="text-end">Philly Cheesesteak</p>
+                        <p class="text-end">Price</p>
+                        <p class="text-end">Amount</p>
+                    </div>
+                </div>
+                
+                <div class="border my-2 p-2 itemInfo d-flex justify-content-between">          
+                    <img class="imagePreview" src="images/stuffedCheeseBread.jpg" alt="yummy food">          
+                    <div class="rightDiv">
+                        <p class="text-end">Stuffed Cheese Bread</p>
+                        <p class="text-end">Price</p>
+                        <p class="text-end">Amount</p>
+                    </div>
+                </div>
+
+                <div class="border my-2 p-2 itemInfo d-flex justify-content-between">      
+                    <img class="imagePreview" src="images/CaesarSalad.jpg" alt="yummy food">              
+                    <div class="rightDiv">
+                        <p class="text-end">Caesar Salad</p>
+                        <p class="text-end">Price</p>
+                        <p class="text-end">Amount</p>
+                    </div>
+                </div>
+                
+                <div class="border my-2 p-2 itemInfo d-flex justify-content-between">      
+                    <img class="imagePreview" src="images/coke.jpg" alt="yummy food">              
+                    <div class="rightDiv">
+                        <p class="text-end">Coke</p>
+                        <p class="text-end">Price</p>
+                        <p class="text-end">Amount</p>
+                    </div>
+                </div>
+
+                <div class="border my-2 p-2 itemInfo d-flex justify-content-between">                    
+                    <img class="imagePreview" src="images/rootBeer.jpg" alt="yummy food">
+                    <div class="rightDiv">
+                        <p class="text-end">Root Beer</p>
+                        <p class="text-end">Price</p>
+                        <p class="text-end">Amount</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="row my-5">
+            <div class="col-12 col-md-9 mx-auto border-black border-top d-flex justify-content-between" id="bottomRow">
+                <div id="payNow" class="mt-2">
+                    <button class="payButtonStyle">PayNow</button>
+                </div>
+                <div class="rightDiv">
+                    <p class="text-end whiteSpace">Subtotal</p>
+                    <p class="text-end whiteSpace">Tax</p>
+                    <p class="text-end whiteSpace">Total</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="paymentMenu" style="background-color: var(--g); border: 2px solid rgb(57, 102, 27)">
+        <div class="d-inline">
+            <form style="float: right;"><input type="button" class="close" value="X"></form>
+        </div>
+        <div class="d-inline p-2">
+            <h2 class="text-center">Enter your payment info</h2>
+        </div>
+
+        <div class="container-fluid">
+            <form>
+                <div class="form-group row col-12 mx-auto">
+                    <div class="col-12 col-md-6">
+                        <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                    </div>
+                </div>
+                <div class="form-group row col-12 mx-auto">
+                    <div class="col-12">
+                        <input type="text" class="form-control" id="email" placeholder="email@domain.com">
+                    </div>
+                </div>
+                <div class="form-group row col-12 mx-auto">
+                    <div class="col-12">
+                        <input type="text" class="form-control" id="cardInfo" placeholder="Enter Card or WeeTon ID number">
+                    </div>
+                </div>
+              </form>
+
+              <div class="form-group row col-4 mx-auto">
+                <div class="col-12 text-center" id="submitButton">
+                    <button class="btn" type="submit" style="background-color: rgb(111, 161, 78);">Submit</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+  
+    <div class="orderConfirmation container-fluid min-vh-100 w-100 d-flex flex-column justify-content-center align-items-center">
+        <div class="orderConfBody">
+            <div class="d-inline">
+                <form style="float: right;"><input type="button" class="backUp payButtonStyle" value="Back to Cart"></form>
+            </div>
+
+            <div class="mx-auto">                    
+                <div class="col-11 mx-auto">
+                    <h1 class="text-center thankYou">our beloved customer.</h1>
+                </div>
+            </div>
+
+            <div class="row col-12 mx-auto mt-4">                    
+                <div class="mx-auto col-12 col-md-3">
+                    <div class="picz d-flex justify-content-center w-100">
+                        <img src="images/shipping.png" alt="shippng">
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <h2 class="text-center emailConf">your email.</h2>
+                    <h3 class="p-3 text-center">Detailed in the email is the estimated arrival time, order summary, and a promotional coupon!
+                        Thank you for using the CATSCAPP and stay buzzing! <br>To return to our homepage...<b class="hoverItem text-primary resetPage">Click here</b> 
+                    </h3>
+                </div>
+                <div class="mx-auto d-none d-md-block col-md-3">
+                    <div class="picz d-flex justify-content-center w-100">
+                        <img src="images/shipping.png" alt="shippng">
+                    </div>
+                </div>
+
+            </div>  
+
+        </div>
+    </div>
+
+    <script src="js/checkout.js"></script>
+
+</body>
+</html>
