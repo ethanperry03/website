@@ -1,10 +1,49 @@
+.main {
+    margin-top: 1%;
+    box-shadow: 0px 0px 10px;
+}
 .selection > div:hover {
     background-color: aliceblue;
     cursor: pointer;
 }
+.choiceBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.choiceBar > div {
+    padding: 2%;
+    cursor: pointer;
+}
+.formBody {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+div.choice:hover {
+    background-color: #99ccff;
+}
+div.choiceBar {
+    background-color: azure;
+}
+div {
+    font-size: 1.5rem;
+}
 .speedtimeForm {
     display: none;
 }
-div {
-    padding: 1%;
+div.formElem {
+    padding: 2%;
 }
+.bg-blue {
+    background-color: #99ccff;
+}
+.retval {
+    font-size: 10vw;
+    padding: 4%;
+}
+/* input[type=number] {
+    width: 70%;
+} */
