@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Square 1</title>
+
+    <style>
+        body {
+            width: 1000px;
+            background-color: antiquewhite;
+        }
+
+        canvas#home {
+            background-color: white;
+            width: 700px;
+            height: 500px;
+        }
+
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+    <form>
+        <input type="color" id="inputColor">
+        <input type="color" id="lineColor">
+        <input type="submit" id="boxsubmit" value="Box color">
+    </form>
+
+    <canvas id="home"></canvas>
+    <script>
+        var c=document.getElementById("home");
+        var ctx=c.getContext("2d");
+
+        document.getElementById("boxsubmit").addEventListener("click", submit);
+        document.getElementById("boxsubmit").addEventListener("click", lines);
+
+        function submit () {
+            ctx.fillStyle = document.getElementById("inputColor").value;        
+            for (var i = 0; i < 7; i++) {
+                drawSet(i*40, 0);
+                drawSet(i*40, 64);
+            }
+        }
+
+        function lines() {
+            ctx.fillStyle = document.getElementById("lineColor").value;      
+            for(var j = 0; j < 9; j++) {
+                drawLine(j*16 + 4);
+            }
+        }
+
+        function drawSet(shiftx, shifty) {
+            var ox = 5;
+            var oy = 4;
+            var h = 16;
+
+            shifty += oy;
+
+            ctx.fillStyle = document.getElementById("inputColor").value;        
+            ctx.fillRect(ox + shiftx, shifty, 20, h);
+            ctx.fillRect(2*ox + shiftx, 1*(h) + shifty, 20, h);
+            ctx.fillRect(3*ox + shiftx, 2*(h) + shifty, 20, h);
+            ctx.fillRect(2*ox + shiftx, 3*(h) + shifty, 20, h);
+        }
+
+        function drawLine(row) {
+            ctx.fillRect(0, row, 1000, 1);
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

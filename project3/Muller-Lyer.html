@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Muller-Lyer Illusion</title>
+    
+    <link rel="stylesheet" href="base.css">
+
+    <style>
+
+        input {
+            font-size: 1.7vw;
+            padding: 0px 5px;
+        } 
+
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="http://cs.wheatoncollege.edu/~eperry/">Homepage</a></li>
+            <li><a href="http://cs.wheatoncollege.edu/~eperry/p3/Poggendorff.html">Poggendorff Illusion</a></li>
+            <li><a href="http://cs.wheatoncollege.edu/~eperry/p3/Cafe-Wall.html">Cafe Wall</a></li>
+            <li><a href="http://cs.wheatoncollege.edu/~eperry/p3/Cafe-Wall-Responsive.html">Cafe Wall Responsive</a></li>
+        </ul>
+    </nav>
+
+    <div id="main">
+        <div id="left">
+            <form>
+                <input type="button" id="animateLines" value="Move Lines">
+                <label for="topColor">Top Line</label>
+                <input type="color" id="topColor" value="#0000FF">
+                <label for="botColor">Bottom Line</label>
+                <input type="color" id="botColor" value="#FF0000">
+            </form>
+            <canvas id="home" width="700" height="500"></canvas>
+
+            <script src="js/arrows.js"></script>
+        </div>
+
+        <div id="right">
+            <h2>Muller-Lyer Arrow Illusion</h2>
+
+            <p>
+                The Müller-Lyer illusion, named after famed German sociologist Franz Carl Muller-Lyer, 
+                is a visual phenomenon that plays with our perception of line length and spatial relationships.
+                 It consists of two lines of equal length, each capped with arrowheads pointing in opposite directions. 
+                 The line with outward-pointing arrowheads appears longer than the line with inward-pointing arrowheads. 
+                 However, when the lines pass each other in the animation, it is clear they are the same length.
+            </p>
+
+            <p>
+                It can be attributed to a phenomenon known as "perceptual misinterpretation of angles." Our brains tend 
+                to perceive the converging arrowheads as cues for depth, which leads to the misjudgment of the line lengths. 
+                The arrows imply that one line is situated closer to us, while the other is farther away, creating a 
+                misalignment in our depth perception. 
+            </p>
+
+            <p>
+                To see this animation, pick the colors you wish for the top and bottom segments respectively and then 
+                press animate. You will see the lines switch back and forth, passing on top of each other, proving equal 
+                length. Also note that the line that seemed longer after the animation will now be the shorter one!
+            </p>
+
+            <p>
+                Find out more information about the Muller-Lyer illusion, check out 
+                <a href="https://en.wikipedia.org/wiki/M%C3%BCller-Lyer_illusion" class="source">this page</a>!
+             </p>
+        </div>
+
+    </div>
+
+    <hr>
+    <script>
+        document.write((document.lastModified).fontsize(2));
+    </script>
+    <hr>
+
+</body>
+
+</html>

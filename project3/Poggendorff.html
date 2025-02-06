@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Poggendorff Illusion</title>
+
+    <link rel="stylesheet" href="base.css">
+
+    <style>
+
+        input[type="range"] {   
+            box-shadow: none;
+            padding: 5px 10px;
+        }
+
+        input[type="text"] {
+            background-color: antiquewhite;
+            box-shadow: none;
+            border: none;
+        }
+
+        input[type="text"]:hover {
+            background-color: antiquewhite;
+            cursor: default;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="http://cs.wheatoncollege.edu/~eperry/">Homepage</a></li>
+            <li><a href="http://cs.wheatoncollege.edu/~eperry/p3/Muller-Lyer.html">Muller-Lyer</a></li>
+            <li><a href="http://cs.wheatoncollege.edu/~eperry/p3/Cafe-Wall.html">Cafe Wall</a></li>
+            <li><a href="http://cs.wheatoncollege.edu/~eperry/p3/Cafe-Wall-Responsive.html">Cafe Wall Responsive</a></li>
+        </ul>
+    </nav>
+
+    <div id="main">
+        <div id="left">
+            <form>
+                <ul id="inputOptions">
+
+                    <li><input type="color" id="fakeline" value="#ff0000"></li>
+                    
+                    <li><input type="color" id="realline" value="#0000FF"></li>
+
+                    <li><input type="range" id="slider" value="1" min="0" max="1" step="0.01"></li>
+
+                    <li><input type="text" id="output"></li>             
+                </ul>
+            </form>
+            <p id = "box"></p>
+
+            <canvas id="home" height="500" width="700"></canvas>
+
+            <script src="js/lines.js"></script>
+        </div>
+
+        <div id="right">
+            
+            <h2>Poggendorff Illusion</h2>
+
+            <p style="padding-top: 11px;">
+                “The Poggendorff illusion is named for Johann Poggendorff (1796-1877), a German physicist 
+                who first described it in 1860. Poggendorff had received a letter from astronomer Johann 
+                Karl Friedrich Zöllner, describing an illusion created by a fabric design.”
+            </p>
+
+            <p>
+                The Poggendorff illusion is an interesting optical phenomenon that challenges our perception 
+                of parallel lines and angles. It consist of a line at an angle where the middle connection is 
+                covered by a rectangle. There is then a decoy line that is drawn that seems like it must connect 
+                to the original but in fact does not. Being able to change the opacity of the rectangle allows 
+                the user to easily convince themselves of the reality of the situation.
+            </p>
+
+            <p>
+                This illusion can be attributed to a phenomenon known as "misalignment of contours,"
+                 where the brain struggles to accurately decipher the intersection of the diagonal line and the 
+                 parallel lines. This is due to the way our brains interpret depth and perspective and the 
+                 introduction of the rectangle disrupts the continuation of the parallel lines. Our brains 
+                 try to correct this conflict by creating the easiest parallel line continuation it can find. 
+            </p>
+
+            <p>
+               Find out more information about the Poggendorff illusion, check out 
+               <a href="https://www.newworldencyclopedia.org/entry/Poggendorff_illusion" class="source">this page!</a>
+            </p>
+        </div>
+    </div>
+    
+
+
+    
+    <hr>
+    <script>
+        document.write((document.lastModified).fontsize(2));
+    </script>
+    <hr>
+    
+
+</body>
+
+</html>

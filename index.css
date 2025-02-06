@@ -59,6 +59,15 @@ h3.namename {
     text-shadow: 0 0 3px #99ccff, 0 0 5px azure;
 }
 
+div.linkHover {
+    padding: 1rem;
+}
+div.linkHover:hover {
+    background-color: azure;
+}
+div.linkHover > a:hover {
+    text-decoration: none;
+}
 
 div.myCard {
     display: flex;

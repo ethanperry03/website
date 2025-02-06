@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="base.css">
+    <title>Cafe Wall Illusion</title>
+
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="http://cs.wheatoncollege.edu/~eperry/">Homepage</a></li>
+            <li><a href="http://cs.wheatoncollege.edu/~eperry/p3/Muller-Lyer.html">Muller-Lyer</a></li>
+            <li><a href="http://cs.wheatoncollege.edu/~eperry/p3/Poggendorff.html">Poggendorff Illusion</a></li>
+            <li><a href="http://cs.wheatoncollege.edu/~eperry/p3/Cafe-Wall-Responsive.html">Cafe Wall Responsive</a></li>
+        </ul>
+    </nav>
+
+    <div id="main">
+        <div id="left">
+            <form>
+                <ul id="inputOptions">
+                    
+                    <li>
+                    <input type="button" id="fadein" value="Fade in!">
+                    </li>
+
+                    <li>
+                    <input type="button" id="fadeout" value="Fade Out!">
+                    </li>
+                    
+                    <li>
+                    <label for="squareColor">Square Color</label>
+                    <input type="color" id="squareColor">
+                    </li>
+                
+                    <li>
+                    <label for="lineColor">Line Color</label>
+                    <input type="color" id="lineColor" value="#999999">
+                    </li>
+
+                </ul>
+            </form>    
+            
+            <canvas id="home"></canvas>
+            <script src="js/square.js"></script>
+
+        </div>
+
+        <div id="right">
+            <h2>The Cafe Wall Illusion</h2>
+            <p>
+                The Cafe Wall Illusion is an optical illusion that creates the appearance of distorted, wavy lines. 
+                It was first discovered by British psychologist Richard Gregory in 1973 and was named after a tiled wall 
+                in a Bristol cafe where he observed this effect.
+            </p>
+            <p>
+                The Cafe Wall illusion is a fascinating example of a visual illusion that plays with our perception of parallel lines.
+                At first glance, it appears as though the horizontal rows of alternating dark and light bricks are slanting, creating a 
+                staggered effect. However, when you fade the square out and leave the lines there, it is clear that those same lines have 
+                been parallel the entire time.
+            </p>
+            <p>
+                After researching the psychology behind this (and digging back to my AP Psych knowledge) I learned that the
+                phenomenon can be attributed to a combination of gestalt principles. The close proximity of the dark and light tiles 
+                leads our brains to group them together, forming the illusion of slanted rows. The higher contrast between the colors
+                of the tiles and lines enhances the effect. Try some different combinations of colors to see which work best for seeing 
+                the illusion but also not seeing it.
+            </p>
+
+            <p>
+                Find out more information about the Cafe Wall illusion, check out 
+                <a href="https://en.wikipedia.org/wiki/Caf%C3%A9_wall_illusion" class="source">this page!</a>
+             </p>
+        </div>
+
+
+    </div>
+
+
+    <hr>
+    <script>
+        document.write((document.lastModified).fontsize(2));
+    </script>
+    <hr>
+
+</body>
+
+</html>

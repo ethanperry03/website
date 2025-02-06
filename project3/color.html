@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Square 1</title>
+
+    <style>
+        body {
+            width: 1000px;
+            background-color: antiquewhite;
+        }
+
+        canvas#home {
+            background-color: white;
+            width: 700px;
+            height: 500px;
+        }
+
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+
+    <form>
+        <input type="color" id="inputColor">
+        <input type="button" name="submit" id="colorSubmit" value="Change Color">
+    </form>
+
+    <canvas id="home"></canvas>
+    <script>
+        
+        var c=document.getElementById("home");
+        var ctx=c.getContext("2d");
+
+        var colur = inputColor.value;
+        document.getElementById("colorSubmit").addEventListener("click", submit);
+
+        function submit () {
+            ctx.fillStyle = document.getElementById("inputColor").value;
+            ctx.fillRect(4, 4, 100, 100);
+        }
+
+  
+
+    </script>
+
+
+
+</body>
+
+</html>

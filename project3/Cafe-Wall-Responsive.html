@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Responsive Cafe Wall</title>
+
+    
+    <link rel="stylesheet" href="base.css">
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="http://cs.wheatoncollege.edu/~eperry/">Homepage</a></li>
+            <li><a href="http://cs.wheatoncollege.edu/~eperry/p3/Muller-Lyer.html">Muller-Lyer</a></li>
+            <li><a href="http://cs.wheatoncollege.edu/~eperry/p3/Poggendorff.html">Poggendorff Illusion</a></li>
+            <li><a href="http://cs.wheatoncollege.edu/~eperry/p3/Cafe-Wall.html">Cafe Wall</a></li>
+        </ul>
+    </nav>
+
+    <div id="main">
+        <div id="left">
+            <form>
+                <input type="button" id="squares" value="Squares">
+                <input type="color" id="squareColor">
+                <input type="button" id="lines" value="Lines">
+                <input type="color" id="lineColor" value="#999999">
+                <input type="button" id="blank" value="Reload">
+            </form>
+
+            <canvas id="home"></canvas>
+            <script src="js/square2.js"></script>
+        </div>
+        
+        <div id="right">
+            <h2>Bonus Cafe Wall</h2>
+
+            <p>
+                This is an alternative version of the animated Cafe Wall Illusion on 
+                <a href="http://cs.wheatoncollege.edu/~eperry/p3/Cafe-Wall.html" class="source">this page.</a> 
+                The difference here is that you can responsively change the 
+                colors of the tiles and the lines in real time! If you want to simulate the 
+                fade in / fade out feature, just pick white squares. Also, if you want to reset 
+                the screen, just hit reload to see the starting animation again.
+            </p>
+        </div>
+
+    </div>
+
+
+    <hr>
+    <script>
+        document.write((document.lastModified).fontsize(2));
+    </script>
+    <hr>
+    
+
+</body>
+
+</html>
