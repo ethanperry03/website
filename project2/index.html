@@ -4,7 +4,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home Page</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/baseCSS.css">
+    <link rel="stylesheet" href="css/baseCSS.css">    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            $(".navbar").load("navbar.html");
+            $(".footer").load("footer.html");
+        });
+    </script>
     
 
 </head>
@@ -12,21 +19,7 @@
 <body>
     <a id="backtotop"></a>
 
-    <nav>
-        <ul>
-            <li>
-                <a href = "https://www.facebook.com/Graphic.Images.Screen.Printing/" target="_blank">
-                <img src="images/mainlogo.png" alt = "top logo"></a>
-            </li>
-            <li><a href="http://cs.wheatoncollege.edu/~eperry/p2/main.html">Home</a></li>
-            <li><a href="http://cs.wheatoncollege.edu/~eperry/p2/print.html">Printing</a></li>
-            <li><a href="http://cs.wheatoncollege.edu/~eperry/p2/customer.html">Customer Service</a></li>
-            <li><a href="http://giscreenprint.com/design-services/design-services.html">Design Services</a></li>
-            <li><a href="http://cs.wheatoncollege.edu/~eperry/p2/screen.html">Screen Making</a></li>
-            <li><a href="http://giscreenprint.com/die-cutting/die-cutting.html">Die Cutting</a></li>
-            <li><a href="http://giscreenprint.com/help/help.html">Help</a></li>
-        </ul>
-    </nav>
+    <nav><div class="navbar"></div></nav>
 
     <div id="top">
         <div id="left">
@@ -101,18 +94,7 @@
         </div>
     </div>
 
-
-
-
-    <footer><ul>
-        <li><a href="#backtotop">Top</a></li>
-        <li><a href="http://cs.wheatoncollege.edu/~eperry/p2/print.html">Printing</a></li>
-        <li><a href="http://cs.wheatoncollege.edu/~eperry/p2/customer.html">Customer Service</a></li>
-        <li><a href="http://giscreenprint.com/design-services/design-services.html">Design Services</a></li>
-        <li><a href="http://cs.wheatoncollege.edu/~eperry/p2/screen.html">Screen Making</a></li>
-        <li><a href="http://giscreenprint.com/die-cutting/die-cutting.html">Die Cutting</a></li>
-        <li><a href="http://giscreenprint.com/help/help.html">Help</a></li>
-    </ul></footer>
+    <footer class="footer"></footer>
         
 </body>
 
