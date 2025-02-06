@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Calculate Gain</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="icon" type="image/jpg" href="images/EthanLogo.png"> -->
+
+    <!-- Bootstrap 5.3.2 (CSS) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery (Only One Version) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Bootstrap 5.3.2 (JS) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom Styles -->
+    <link href="index.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <script src="calculate.js"></script>
+
+    <div class="selection d-flex justify-content-stretch">
+        <div class="distFormButton">Distance Formula</div>
+        <div class="speedtimeFormButton">Speed Time Formula</div>
+    </div>
+
+    <form class="distForm">
+        <div class="formElem">incline<input type="number" class="num" id="incline" value="15"></div>
+        <div class="formElem">distance<input type="number" class="num" id="distance" value="1.0"></div>
+        <div class="formElem"><input type="submit" class="submit" id="submit1" value="SUBMIT"></div>
+    </form>
+
+    <form class="speedtimeForm">
+        <div class="formElem">incline<input type="number" class="num" id="incline" value="15"></div>
+        <div class="formElem">speed<input type="number" class="num" id="speed" value="3"></div>
+        <div class="formElem">time<input type="number" class="num" id="time" value="30"></div>
+        <div class="formElem"><input type="submit" class="submit" id="submit2" value="SUBMIT"></div>
+    </form>
+
+    <div class="retval"></div>
+
+
+</body>
+</html>

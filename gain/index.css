@@ -1,0 +1,10 @@
+.selection > div:hover {
+    background-color: aliceblue;
+    cursor: pointer;
+}
+.speedtimeForm {
+    display: none;
+}
+div {
+    padding: 1%;
+}
