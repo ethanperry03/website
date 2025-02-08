@@ -6,24 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="base.css">
     <title>Cafe Wall Illusion</title>
-
-
-    <style>
-
-    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            $(".navbar").load("navbar.html");
+        });
+    </script>
 
 </head>
 
 <body>
 
-    <nav>
-        <ul>
-            <li><a href="http://cs.wheatoncollege.edu/~eperry/">Homepage</a></li>
-            <li><a href="http://cs.wheatoncollege.edu/~eperry/p3/Muller-Lyer.html">Muller-Lyer</a></li>
-            <li><a href="http://cs.wheatoncollege.edu/~eperry/p3/Poggendorff.html">Poggendorff Illusion</a></li>
-            <li><a href="http://cs.wheatoncollege.edu/~eperry/p3/Cafe-Wall-Responsive.html">Cafe Wall Responsive</a></li>
-        </ul>
-    </nav>
+    <nav class="navbar"></nav>
 
     <div id="main">
         <div id="left">

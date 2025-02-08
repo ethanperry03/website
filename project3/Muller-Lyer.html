@@ -6,6 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Muller-Lyer Illusion</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+            $(".navbar").load("navbar.html");
+        });
+    </script>
     
     <link rel="stylesheet" href="base.css">
 
@@ -21,14 +27,7 @@
 </head>
 
 <body>
-    <nav>
-        <ul>
-            <li><a href="http://cs.wheatoncollege.edu/~eperry/">Homepage</a></li>
-            <li><a href="http://cs.wheatoncollege.edu/~eperry/p3/Poggendorff.html">Poggendorff Illusion</a></li>
-            <li><a href="http://cs.wheatoncollege.edu/~eperry/p3/Cafe-Wall.html">Cafe Wall</a></li>
-            <li><a href="http://cs.wheatoncollege.edu/~eperry/p3/Cafe-Wall-Responsive.html">Cafe Wall Responsive</a></li>
-        </ul>
-    </nav>
+    <nav class="navbar"></nav>
 
     <div id="main">
         <div id="left">
