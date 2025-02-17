@@ -1,7 +1,5 @@
-dems/dolomites/
-dems/exampleFiles/
-dems/misc/
-dems/sparse/
-dems/testing/
-dems/whites/
-dems/whites.zip
+css/indexOld.css
+css/readfile.css
+
+dems/*
+!dems/exampleFiles.zip
