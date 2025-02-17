@@ -1,0 +1,10 @@
+ncols 6
+nrows 4
+xllcorner 0
+yllcorner 0
+cellsize 3.2
+NODATA_value 0
+1 2 3 4 5 6
+2 0 0 0 0 5
+3 2 1 2 3 4
+4 3 2 1 0 3

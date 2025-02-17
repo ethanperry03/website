@@ -1,0 +1,218 @@
+body {
+    background-color: #6a8a73;
+}
+.rubik-broken-fax-regular {
+    font-family: "Rubik Broken Fax", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    color: #202024;
+}
+
+
+/* file uploading */
+#labelFileInput {
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 1.2vw;
+    background-color: #ead8c7;  
+    box-shadow: 0px 0px 2px;
+}
+#labelFileInput:hover {
+    border: 1px solid #3f2d05;
+    color: #6a8a73;
+    background-color: #ead8c7;
+}
+.hover-bold {
+    transition: transform 0.2s ease-in-out, font-size 0.2s ease-in-out;
+}
+.hover-bold:hover {
+    transform: scale(1.1);
+    font-size: 1.6em;
+}
+input[type=button]:hover, #labelFileInput:hover {
+    color: #6a8a73;
+}
+
+
+/* div for both sections */
+.navbar {
+    width: 98%;
+    margin: 0 1%;
+    display: flex;
+    justify-content: space-around;
+}
+div#main > div {
+    border: 1px solid black;
+    box-shadow: 0px 0px 6px;
+}
+
+
+/* main input section */
+div#form, form {
+    /* background-color: #cbb29b;
+    opacity: 0.95;
+    background-image:  radial-gradient(#284f03 0.5px, transparent 0.5px), radial-gradient(#105f10 0.5px, #e7fde5 0.5px);
+    background-size: 10px 10px;
+    background-position: 0 0,10px 10px; */
+    background-color: #bea793;
+    font-weight: 450;
+    /* padding: 0.5% 0%; */
+}
+/* div#form, form,  */
+div.formChild {
+    padding: 0.5%;
+    font-size: 1.1vw;
+}
+div.flexBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+div.flexStart {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div.fitMyStuff {
+    width: 100%;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+div.img {
+    width: 10px;
+    background-color: transparent;
+}
+
+
+#doIDW {
+    visibility: hidden;
+}
+.inputTextBox:focus {
+    background-color: #ead8c7;
+}
+.inputTextBox {
+    width: 60%;
+    background-color: #fff6ed;
+}
+input[type=button], .btn {
+    color: black;
+    background-color: #ead8c7;
+    box-shadow: 0px 0px 1px;
+}
+.checkandclear {
+    background-color: #f7fff9;
+    font-size: 0.86rem;
+}
+.dropdown-item:focus,
+.dropdown-item:active {
+    background-color: transparent !important;
+    color: inherit;
+}
+.dropdown-item > label {
+    margin-left: 4%;
+}
+.dropdown-menu {
+    background-color: #bea793;
+}
+.dropdown-toggle {
+    font-size: 1.2vw;
+}
+.zipDownload, .zipDownload:hover {
+    text-decoration: none;
+}
+
+
+
+/* plotting section */
+div#plot {
+    background-color: #ead8c7;
+    border: 1px solid black;
+    width: 98%;
+    margin: 1% 1%;
+    box-shadow: 0px 0px 6px;
+    height: 84vh;
+    /* height: auto; */
+}
+#surfacePlot {
+    color: red;
+    background-color: #202024;
+    width: 100%;
+    height: fit-content;
+}
+#loading {
+    color: red;
+}
+div#arrayContainer {
+    background-color: #bbb;
+    /* border: 1px solid black; */
+    overflow-y: auto;
+    padding: 20px;
+}
+div.floatMain {
+    width: 46%;
+    height: 450px;
+    float: left;
+    margin-left: 1%;
+}
+
+h3.loadingText {
+    margin-top: 1%;
+}
+.spinnerdiv {
+    width: 3rem;
+    height: 3rem;
+}
+
+
+.userGuide:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+/* FAQ Popup Overlay */
+#faqPopup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+}
+
+/* FAQ Popup Content */
+.faq-content {
+    background-color: #ead8c7;
+    margin: 15% auto; /* 15% from top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%; /* Could be more or less, depending on screen size */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative; /* Position relative to parent */
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

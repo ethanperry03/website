@@ -1,0 +1,120 @@
+body {
+    background-color: #6a8a73;
+    /* background-color: #ead8c7; */
+}
+.rubik-broken-fax-regular {
+    font-family: "Rubik Broken Fax", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    color: #202024;
+}  
+
+/* file uploading */
+#labelFileInput {
+    border: 1px solid black;
+    padding: 0px 4.5px;
+}
+#labelFileInput:hover {
+    border: 1px solid rgb(213, 213, 213);
+    color: rgb(64, 183, 223);
+    background-color: #d3bda9;
+    font-weight: bold;
+    padding: 0px 2px;
+}
+
+/* div for both sections */
+div#main {
+    height: 550px;
+    display: flex;
+    justify-content: space-around;
+}
+div#main > div {
+    border: 1px solid black;
+    box-shadow: 0px 0px 6px;
+}
+
+
+/* main input section */
+div#form {
+    background-color: #e5e5f7;
+    opacity: 0.95;
+    background-image:  radial-gradient(#284f03 0.5px, transparent 0.5px), radial-gradient(#105f10 0.5px, #e7fde5 0.5px);
+    background-size: 10px 10px;
+    background-position: 0 0,10px 10px;
+    /* background-color: #d3bda9; */
+    width: 13%;
+}
+div.formChild {
+    padding: 10px;
+}
+#doIDW {
+    visibility: hidden;
+}
+#outputFileName {
+    width: 78%;
+}
+.inputTextBox:focus {
+    background-color: rgb(247, 255, 241);
+}
+.inputTextBox {
+    width: 100%;
+    background-color: #fff6ed;
+}
+input[type=button] {
+    background-color: #f7fff9;
+    box-shadow: 0px 0px 1px;
+}
+.dropdown-item:focus,
+.dropdown-item:active {
+    background-color: transparent !important;
+    color: inherit;
+}
+.dropdown-item > label {
+    margin-left: 4%;
+}
+.dropdown-menu {
+    z-index: 10000;
+    position: absolute;
+}
+
+
+
+
+
+/* plotting section */
+div#plot {
+    background-color: #ead8c7;
+    border: 1px solid black;
+    width: 85%;
+    margin-right: 0.5%;
+    /* height: auto; */
+}
+#surfacePlot {
+    color: red;
+    width: 100%;
+    height: fit-content;
+}
+#loading {
+    color: red;
+}
+div#arrayContainer {
+    background-color: #bbb;
+    /* border: 1px solid black; */
+    overflow-y: auto;
+    padding: 20px;
+}
+div.floatMain {
+    width: 46%;
+    height: 450px;
+    float: left;
+    margin-left: 1%;
+}
+
+h3.loadingText {
+    margin-top: 1%;
+}
+.spinnerdiv {
+    width: 3rem;
+    height: 3rem;
+}

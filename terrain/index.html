@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEM Viewer</title>
+    <link rel="icon" type="image/png" href="images/logoGreen.png">
+  
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Broken+Fax&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+    <div id="faqPopup" class="faq-popup">
+        <div class="faq-content">
+            <span id="closeFAQ" class="close">&times;</span>
+            <h2>User Guide</h2>
+            <br>
+            <p>Welcome to the Web-based GIS Visualizer! Upon loading, you will notice a file is already
+                plotted for you to experiment with! However, feel free to upload your own DEM files to 
+                begin visualization. Ensure they are correctly formatted DEM files ending in the correctl
+                file type and have proper heading. 
+                <br><br>
+                If you do not have any DEM files, go to the dropdown menu and download some of the
+                example files there. I have included some sparse files so you can experiment with the interpolation
+                method I implemented! See the text file in the zip folder to get details on each file.
+                <br><br>
+                If you would like to utilize the terrain reconstruction feature, ensure to upload a properly
+                formatted file with a "nodata_value" line. The interpolation is implemented with Inverse
+                Distance Weighting (IDW). 
+                <br><br>
+                Explore unique features such as the scaling, unit changing, and treeline adjustments. Check
+                out some of the extra features in the dropdown menu. You can strip the plotting window, or 
+                get all of the options to really contextualize the plot you are viewing. You can also even 
+                download your in the 3D printable format (.stl)!
+            </p>
+        </div>
+    </div>
+
+    <div class="d-flex flex-column">
+        <form>
+            <div class="form d-flex justify-content-around align-items-center">
+                <div>
+                    <img src="images/logo.png" class="img-fluid logoImage openFAQ" width="60" alt = "WebGis Logo">
+                </div>
+
+                <div class="formChild">
+                    <label for="fileInput" class="hover-bold" id="labelFileInput">Upload File</label>
+                    <input type="file" id="fileInput" style="display:none;">
+                    <!-- <span id="fileNameDisplay"></span> -->
+                </div>                
+                
+                <div class="formChild d-flex justify-content-between align-items-center flex-column">
+                    <input class="m-1" type="button" id="DEMdownload" value="Download">
+                    <input  type="button" id="loadDefault" value="Reload Default">
+                </div>
+                
+                <div class="formChild">
+                    <div class="flexBetween"><label for="scaleFactor" id="scaleFactorLabel">Scale Factor</label>
+                    <input type="number" class="inputTextBox" id="scaleFactor" value=" " min="0" step="0.1" disabled></div>
+                    
+                    <div class="flexBetween"><label for="treeline" id="treelineLabel">Tree Line (m)</label>
+                    <input type="number" class="inputTextBox" id="treeline" step="1" value=" " disabled></div>
+                </div>
+                
+                <div class="formChild">
+                    Display Plot:
+                    <div class="flexStart flex-column">
+                    <div><input type="radio" class="showPlot" id="ogPlot" name="interpolate" value="original">
+                    <label for="ogPlot">Original Plot</label></div>
+                    <div><input type="radio" class="showPlot" id="idwPlot" name="interpolate" value="idw">
+                    <label for="idwPlot">Interpolated Plot</label></div>
+                    </div>
+                </div>
+                
+                <div class="formChild">
+                    Convert Units:
+                    <div class="flexStart flex-column">
+                        <div>
+                            <input type="radio" class="convertButton" id="MTF" name="convert" value="Meters">
+                            <label for="MTF" class="">Meters to Feet</label>
+                        </div>
+                        <div>
+                            <input type="radio" class="convertButton" id="FTM" name="convert" value="Feet">
+                            <label for="FTM">Feet to Meters</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formChild">
+                    <div class="dropdown">
+
+                        <button class="btn btn-secondary dropdown-toggle" role="button" data-bs-toggle="dropdown">
+                            More Options 
+                        </button>
+                        <ul class="dropdown-menu p-2">
+                            <div class="flexStart userGuide">
+                            <li><div class="openFAQ">
+                                User Guide
+                            </div></li></div>
+                            <div class="dropdown-divider"></div>
+
+                            <div class="dropdown-header text-dark fw-bold">Plotting Features</div>
+                            <div class="dropdown-item"><input type="checkbox" id="addContour" value="addContour">
+                                <label for="addContour">Add Contour</label>
+                            </div>
+                            <div class="dropdown-header text-dark fw-bold">Add Plotting Lines</div>
+                            <li><div class="dropdown-item axisCheck">
+                                <input type="checkbox" id="xAddPlot">
+                                <label for="xAddPlot">X-axis</label>
+                            </div></li>
+                            <li><div class="dropdown-item axisCheck">
+                                <input type="checkbox" id="yAddPlot" value="yAddPlot">
+                                <label for="yAddPlot">Y-axis</label>
+                            </div></li>
+                            <li><div class="dropdown-item axisCheck">
+                                <input type="checkbox" id="zAddPlot" value="zAddPlot">
+                                <label for="zAddPlot">Z-axis</label>
+                            </div></li>
+                            <div class="dropdown-divider"></div>
+                            <div class="flexStart">
+                                <div class="m-1">
+                                    <input type="button" class="checkandclear checkAll" value="Check All">
+                                </div>
+                                <div class="m-1">
+                                    <input type="button" class="checkandclear clearAll" value="Clear All">
+                                </div>
+                            </div>
+                            <div class="dropdown-divider"></div>
+                            <div class="flexStart">
+                                <div class="m-1">
+                                <input type="button" id="downloadSTL" value="Convert to STL">
+                                </div>
+                            </div>
+
+                            <!-- <div class="dropdown-divider"></div>
+                            <div class="formChild flexCenter flex-column">
+                                <div class="dropdown-header text-dark fw-bold">Remove Data Values</div>
+                                <input type="number" class="inputTextBox" id="sparseProp" value="0.05" min="0" step="0.01">
+                            </div> -->
+
+                            <div class="dropdown-divider"></div>
+                            <div class="flexStart">
+                            <li><div class="dropdown-item">
+                                <a class="zipDownload" href="dems/exampleFiles.zip" download="exampleFiles.zip">Download DEMs</a>
+                            </div></li></div>
+
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+        </form>
+
+        <div id="plot">
+            <div id="surfacePlot"></div>
+        </div>
+    </div>
+
+    
+    <script src="js/plot.js"></script>
+    <script src="js/resetVars.js"></script>
+    <script src="js/cookie.js"></script>
+    <script src="js/savestl.js"></script>
+    <!-- <script src="js/sparse.js"></script> -->
+    <script src="js/idw.js"></script>
+    <script src="js/download.js"></script>
+    <script src="js/scale.js"></script>
+    <script src="js/io.js"></script>
+    <script src="js/eventHandler.js"></script>
+    
+</body>
+</html>
