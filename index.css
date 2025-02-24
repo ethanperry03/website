@@ -69,13 +69,19 @@ h3.namename {
 
 div.linkHover {
   padding: 1rem;
+  text-decoration: none;
 }
 div.linkHover:hover {
   background-color: azure;
+  text-decoration: none;
   cursor: pointer;
 }
-div.linkHover > a:hover {
-  text-decoration: none;
+a,
+a:visited,
+a:hover,
+a:active,
+a div {
+  text-decoration: none !important;
 }
 
 div.myCard {
@@ -97,7 +103,7 @@ div.myCard > .myCardBody {
   background-color: rgb(191, 220, 248);
 }
 
-.centerText{
+.centerText {
   display: flex; /* Add this line */
   align-items: center; /* Add this line */
   justify-content: center; /* Add this line */
